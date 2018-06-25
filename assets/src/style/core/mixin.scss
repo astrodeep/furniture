@@ -1,0 +1,70 @@
+$portrait-phones: 575.98px;
+$landscape-phones: 767.98px;
+$portrait: 576px;
+$landscape: 768px;
+$tablets: 950px;
+$desctop: 1200px;
+$desctop-xl: 1340px;
+
+
+
+
+@mixin mobail-sm {
+  @media (max-width: #{$portrait-phones}) {
+    @content;
+  }
+}
+
+
+
+
+@mixin max-width-portrait-phones {
+  @media (max-width: #{$portrait-phones}) {
+    @content;
+  }
+}
+@mixin max-width-landscape-phones {
+  @media (max-width: #{$landscape-phones}) {
+    @content;
+  }
+}
+
+
+@mixin max-width-desctop {
+  @media (max-width: #{$desctop}) {
+    @content;
+  }
+}
+
+@mixin max-width-tablets {
+  @media (max-width: #{$tablets}) {
+    @content;
+  }
+}
+
+
+@mixin max-width-desctop-xl {
+  @media (max-width: #{$desctop-xl}) {
+    @content;
+  }
+}
+
+
+@mixin mobile-lg {
+  @media (min-width: #{$portrait}) and (max-width: #{$landscape-phones - 1px}) {
+    @content;
+  }
+}
+
+@mixin tablets {
+  @media (min-width: #{$landscape}) and (max-width: #{$tablets - 1px}) {
+    @content;
+  }
+}
+
+
+@mixin lg {
+  @media (min-width: #{$tablets}) and (max-width: #{$desctop - 1px}) {
+    @content;
+  }
+}

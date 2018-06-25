@@ -1,0 +1,37 @@
+.maps {
+  position: relative;
+  padding: 50px 0 50px 0;
+  background: url("../images/maps__back.jpg") no-repeat;
+
+  &__box {
+    background: rgba(255, 255, 255, 0.8);
+    max-width: 490px;
+    padding: 20px 30px 20px 30px;
+
+  }
+
+  &__info {
+    display: flex;
+    margin-bottom: 25px;
+    color: $color_636363;
+    a {
+      color: $color_247bfd;
+      font-weight: $font_semibold;
+    }
+    span {
+      font-weight: $font_semibold;
+      margin-right: 10px;
+    }
+
+    i {
+      margin-right: 20px;
+      font-size: 25px;
+
+      &.fa-envelope {
+        font-size: 20px;
+        margin-right: 10px;
+      }
+    }
+  }
+
+}

@@ -1,0 +1,34 @@
+.partners {
+  padding: 40px 0 60px 0;
+
+  &__title {
+    font-size: $text_size30;
+    color: $color_070000;
+    text-align: center;
+    font-weight: $font_semibold;
+    @include max-width-tablets {
+      font-size: 23px;
+    }
+  }
+
+
+  &__box{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 50px;
+
+
+    @include max-width-tablets {
+    flex-direction: column;
+      margin-top: 20px;
+    }
+    &_item{
+      img{
+        @include max-width-tablets {
+           display: block;
+          margin: 10px auto auto auto ;
+        }
+      }
+    }
+  }
+}

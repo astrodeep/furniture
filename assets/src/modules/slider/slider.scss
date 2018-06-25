@@ -1,0 +1,189 @@
+.slider {
+
+  &__box{
+    max-width: 1170px;
+    position: relative;color: $color-white;
+    margin: 0 auto;text-align: center;
+  }
+
+  &__content {
+    border-bottom: 5px solid $color-white;
+    border-right: 5px solid $color-white;
+    border-top: 5px solid $color-white;
+    padding: 29px 0 20px 0;
+    min-height: 240px;
+    position: relative;
+    @include max-width-landscape-phones{
+      padding: 0px 15px 20px 15px;
+    }
+
+    @include max-width-desctop-xl{
+      border: 0;
+    }
+
+    &_title {
+      font-size: $text_size48;
+      display: block;
+      max-width: 720px;
+      margin: 0 auto;
+      text-transform: uppercase;
+      line-height: 58px;
+@include max-width-landscape-phones{
+  font-size: $text_size28;
+  line-height: 38px;
+}
+
+    }
+
+    &_button {
+      border: 1px solid $color-white;
+      text-align: center;
+      width: 158px;
+      color: $color-white;
+      font-weight: $font_semibold;
+      text-transform: uppercase;
+      margin: 0 auto;
+      transition: 0.2s linear;
+      display: block;
+      padding: 12px 0 12px 0;
+      text-decoration: none;
+      margin-top: 12px;
+
+      &:hover {
+        background: $color-white;
+        color: $color_070000
+      }
+
+    }
+
+    &:before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0;
+      background: $color-white;
+      width: 5px;
+      height: 50px;
+      @include max-width-desctop-xl{
+         display: none;
+      }
+
+    }
+    &:after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      background: $color-white;
+      width: 5px;
+      height: 50px;
+      @include max-width-desctop-xl{
+        display: none;
+      }
+    }
+
+    &_text {
+      max-width: 720px;
+      margin: 0 auto;
+      line-height: 28px;
+      font-size: $text_size14;
+    }
+
+
+    &_img{
+      position: absolute;
+      left: -72px;
+      top: 70px;
+      width: 151px;
+      height: 150px;
+      background: url("../images/slider__before.png") no-repeat;
+
+      @include max-width-desctop-xl{
+        display: none;
+      }
+    }
+  }
+
+  .item{
+    padding: 35px 0 65px 0;
+  }
+
+}
+
+.owl-theme {
+  // Styling Next and Prev buttons
+  .owl-nav {
+
+    [class*='owl-'] {
+      cursor: pointer;
+
+      &:hover {
+      }
+    }
+    .disabled {
+      opacity: $nav-disabled-opacity;
+      cursor: default;
+    }
+
+
+
+  }
+
+  .owl-prev{
+    position: absolute !important;
+    width: 31px; text-indent: -9999px;
+    left: 20px;
+    top: 40%;
+    display: block !important;
+    height: 61px;
+    background: url("../images/slider__prev.png") no-repeat !important;
+  }
+
+
+  .owl-next{
+    position: absolute !important;
+    width: 31px; text-indent: -9999px;
+    right: 20px;
+    top: 40%;
+    display: block !important;
+    height: 61px;
+    background: url("../images/slider__right.png") no-repeat !important;
+  }
+
+
+
+  // Styling dots
+  .owl-nav.disabled + .owl-dots {
+    margin-top: -60px;
+  }
+
+  .owl-dots {
+    text-align: center;  margin-top: -60px;
+    -webkit-tap-highlight-color: transparent;
+    position: relative;
+    z-index: 10;
+
+
+    .owl-dot {
+      display: inline-block;
+      zoom: 1;transition:0.2s linear ;
+      *display: inline;
+      span {
+        width: 8px;
+        height: 8px;
+        margin: 10px;  border-radius: 0;
+        background: transparent;
+        display: block;transition:0.2s linear ;
+        border: 1px solid $color-white;
+        -webkit-backface-visibility: visible;
+        transition: opacity 200ms ease;
+      }
+      &.active,
+      &:hover {
+        span {
+          background: $color-white;
+        }
+      }
+    }
+  }
+}
