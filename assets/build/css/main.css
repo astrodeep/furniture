@@ -3431,10 +3431,12 @@ body {
     @media (max-width: 950px) {
       .footer__social {
         margin-top: 30px; } }
-    .footer__social a i {
-      margin-right: 15px;
-      text-decoration: none;
-      font-size: 25px; }
+    .footer__social a {
+      color: #636363; }
+      .footer__social a i {
+        margin-right: 15px;
+        text-decoration: none;
+        font-size: 25px; }
     .footer__social.maps-social {
       margin-top: 0; }
       .footer__social.maps-social a {
